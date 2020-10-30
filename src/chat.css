@@ -1,0 +1,29 @@
+.chat {
+    display: block;
+    
+    background-color: lightblue;
+  }
+
+.SendMessage:input {
+    
+    width:100px;
+    height:100px;
+}
+.SendMessage:button {
+    height:40px;
+    margin:8px 8px; 
+}
+
+.div1 {
+    display :block;
+    
+}
+.div {
+    display : none;
+}
+.view-message {
+    margin-top: 250px;
+}
+.messages {
+    float: left;
+}
