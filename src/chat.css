@@ -1,18 +1,85 @@
 .chat {
-    display: block;
-    
+    display: flex;
+    border: 2px solid red;
     background-color: lightblue;
   }
 
-.SendMessage:input {
-    
-    width:100px;
-    height:100px;
+.label{
+    padding-right:10px;
+    font-size: 25px;
+    font-style: bold;
+    display: inline-block;
+    margin-left: 5px;
+    width: 8%;
+    min-width: 60px;
 }
-.SendMessage:button {
+.form-control{
+    padding: 10px 0px 10px 0px;
+}
+.button-control{
+    padding: 10px 0px 10px 0px;
+    margin-left:280px;
+}
+
+button{
+    background-color: green;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+.SendMessage{
+    padding: 10px 100px 10px 100px;
+}
+
+input{
+    width: 300px;
+    padding: 5px 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size:18px;
+}
+textarea{
+    width: 300px;
+    padding: 5px 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size:18px;
+    vertical-align: top;
+}
+
+ /*
+ .label--right {
+     text-align: right;
+ }
+.brief {
+    
+    padding: 5px;
+    margin-left: 17px;
+    margin-top: 10px;
+    text-align: left;
+}
+.detail {
+    
+    margin-top: 30px;
+    margin-left: 10px;
+    height: 200px;
+    text-align: left;
+} */
+/* .SendMessage:button {
     height:40px;
     margin:8px 8px; 
-}
+} */
 
 .div1 {
     display :block;
@@ -21,9 +88,13 @@
 .div {
     display : none;
 }
-.view-message {
+/* .view-message {
     margin-top: 250px;
-}
+} */
 .messages {
     float: left;
+}
+
+.ul {
+    list-style-type: none;
 }

@@ -36,27 +36,37 @@ const Chat = () => {
  */
     let jumpTo = (step) => {
         setStep(step);
-        
     };  
 
     function renderMessage() {
         /* return history.map((b, index) => (<li key = {index} ><button className={cn({historyButtonSelected: index == step})}  onClick = {() => {jumpTo(index)}}>{index === 0 ? "Go to start of the game" : `Goto step${index}`}
         </button></li>) */
-        return info.map((b, index) => (<li key = {index} ><Button selected={index === step}  onClick = {() => {jumpTo(index)}}>{index === 0 ? "No messages Yet" :<div>{b.brief} <br/> {b.detail}  </div>}
-        </Button></li>)
+        return info.map((b, index) => (<div className="msg-button" key = {index} ><Button selected={index === step}  onClick = {() => {jumpTo(index)}}>{index === 0 ? "No messages Yet" :<div>{b.brief} <br/> {b.detail}  </div>}
+        </Button></div>)
         )
       }
   
     return (
         <div className="chat">
         <div className="SendMessage">
-        
-                <h4>Brief</h4>
-                <input type="text" onChange={(e) => {setBrief(e.target.value); }}/>
-                <h4>Detail</h4>
-                <input type="text" onChange={(e) => { setDetail(e.target.value) }}/><br/><br/>
+            <div className="form-control">
+                <label className="label">Brief: </label>
+                <input className = "brief" type="text" onChange={(e) => {setBrief(e.target.value); }}/>
+            </div>
+
+            <div className="form-control">
+                <label className="label">Detail:</label>
+                <textarea className = "detail" rows="6" onChange={(e) => { setDetail(e.target.value) }}></textarea>
+            </div>
                 {/* <button onClick = {() => {const newInfo = info.concat([{brief, detail}]); setInfo(newInfo)}}>Add</button> */}
+                <div className="button-control">
+
                 <button onClick={() => {check()}}>Add</button>
+
+                </div>
+
+
+                
            
             </div>
             
@@ -64,8 +74,10 @@ const Chat = () => {
             
             
             <div>
-                <li>{renderMessage()}</li>
-                <div></div>
+            
+            {renderMessage()}
+            
+                
                 
             </div>
 

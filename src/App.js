@@ -12,7 +12,7 @@ function App() {
          <li>
            <Link to="/chat">Send Message</Link>
          </li>
-         <li>
+         <li className="view">
            <Link to="/message">View message</Link>
          </li>
        </ul>
